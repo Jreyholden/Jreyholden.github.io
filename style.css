@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: "Roboto Slab", serif;
+  font-family: "Times New Roman", Times, serif;
   color: #04005d;
   line-height: 1.4;
 }
@@ -12,10 +12,12 @@ h1 {
   font-size: 60px;
   font-weight: 700;
   margin: 0;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 a {
-  font-size: 25px;
+  font-size: 20px;
   color: #04005d;
   text-decoration-line: none;
 }
@@ -35,12 +37,12 @@ img {
 }
 
 .card {
-  border-radius: 30px;
+  border-radius: 0px;
   background: #FFFFFF;
-  padding: 40px 50px 50px 50px;
+  padding: 7px 7px 7px 7px;
   width: 700px;
   height: 400px;
-  box-shadow: 0px 0px 200px #000035;
+  box-shadow: 0px 0px 25px #000000;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -48,14 +50,51 @@ img {
 }
 
 #content {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 300;
+}
+
+.card-inner {
+  border: 3px solid #04005d; /* Thin border inside */
+  padding: 1px 10px 10px 10px; /* Space between the border and content */
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box; /* Keeps the padding and border inside */
+  position: relative; /* Added to make .card-inner the positioning context */
 }
 
 #contacts {
   position: absolute;
-  bottom: 50px;
+  bottom: 15px;
+  width: 100%;
 }
+
+.contact-row {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: space-between; /* Ensure email and resume are spaced out */
+}
+
+.contact-row a {
+  font-size: 20px;
+  color: #04005d;
+  text-decoration-line: none;
+  transition: font-weight 0.3s ease; /* Transition only for font-weight */
+}
+
+.contact-row a:hover {
+  font-weight: 700; /* Bold the text on hover */
+}
+
+.resume-button {
+  margin-left: 20px; /* Optional spacing between the email and resume button */
+  position: absolute;
+  right: 20px; /* Offset from the right edge of .card-inner, matching its right padding */
+}
+
+
+
+
 
 @media only screen and (max-device-width: 800px) {
   .card {
