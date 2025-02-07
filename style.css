@@ -160,4 +160,13 @@ img {
     font-size: 20px;
   }
 
+  .resume-button {
+    position: static;  /* Let it be part of the normal flex flow */
+    margin-left: 10px;
+  }
+  
+  .contact-row {
+    justify-content: center; /* Or adjust as needed */
+  }
+
 }
