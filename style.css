@@ -153,16 +153,16 @@ img {
   }
 
   a {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   #content {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .resume-button {
     position: static;  /* Let it be part of the normal flex flow */
-    margin-left: 10px;
+    margin-left: 5px;
   }
   
   .contact-row {
