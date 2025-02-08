@@ -165,25 +165,21 @@ img {
     text-align: center;
   }
 
-  /* Make standalone links (LinkedIn and phone number) block-level elements */
-  #contacts > a {
+  /* Make all contact links block-level and reduce vertical spacing */
+  #contacts a {
     display: block;
-    margin: 5px 0;
+    margin: 3px 0;  /* Reduced margin for less space between lines */
   }
 
-  /* For the email and resume links, display them side-by-side but centered */
+  /* Ensure the email and resume are on separate lines */
   .contact-row {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    width: 100%;
+    display: block;  /* Stack email and resume instead of inline */
   }
-  
-  /* Remove absolute positioning from the resume button */
+
+  /* Remove any special positioning from resume-button */
   .resume-button {
     position: relative;
-    margin-left: 5px; /* small gap between email and resume */
+    margin: 3px 0;  /* Ensure similar spacing as the other links */
   }
 }
+
