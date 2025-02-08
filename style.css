@@ -160,13 +160,17 @@ img {
     font-size: 15px;
   }
 
-  .resume-button {
-    position: static;  /* Let it be part of the normal flex flow */
-    margin-left: 5px;
+  /* Adjust the contact row to stack items vertically */
+  .contact-row {
+    flex-direction: column;  /* Stack the links on separate lines */
+    justify-content: center; /* Center them horizontally */
+    align-items: center;
   }
   
-  .contact-row {
-    justify-content: center; /* Or adjust as needed */
+  /* Resume button is now in the normal flow */
+  .resume-button {
+    position: static;
+    margin-top: 10px; /* Space between email and resume */
+    margin-left: 0;  /* Remove the left margin */
   }
-
 }
