@@ -164,8 +164,8 @@ img {
   .contact-row {
     font-size: 15px;
     flex-direction: column;  /* Stack the links on separate lines */
-    justify-content: center; /* Center them horizontally */
-    align-items: center;
+    justify-content: left; /* Center them horizontally */
+    align-items: left;
   }
   
   /* Resume button is now in the normal flow */
