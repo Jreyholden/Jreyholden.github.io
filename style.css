@@ -162,6 +162,7 @@ img {
 
   /* Adjust the contact row to stack items vertically */
   .contact-row {
+    font-size: 15px;
     flex-direction: column;  /* Stack the links on separate lines */
     justify-content: center; /* Center them horizontally */
     align-items: center;
