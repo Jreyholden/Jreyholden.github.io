@@ -170,7 +170,7 @@ img {
   
   /* Resume button is now in the normal flow */
   .resume-button {
-    position: static;
+    position: absolute;
     margin-top: 10px; /* Space between email and resume */
     margin-left: 0;  /* Remove the left margin */
   }
