@@ -14,12 +14,18 @@ h1 {
   margin: 0;
   text-decoration: underline;
   text-decoration-thickness: 3px;
+  text-shadow:
+    -2px -2px 2px rgba(255,255,255,0.8),  /* highlight with blur */
+     2px  2px 2px rgba(0,0,0,0.3);       /* shadow with blur */
 }
 
 a {
   font-size: 20px;
   color: #04005d;
   text-decoration-line: none;
+  text-shadow:
+  -0.5px -0.5px 0 #ffffff, 
+   0.5px  0.5px 0 #000000;
 }
 
 a:hover,
@@ -39,6 +45,8 @@ img {
 .card {
   border-radius: 0px;
   background: #FFFFFF;
+  background: url("cardTexture.jpg") no-repeat center center; 
+  background-size: cover;
   padding: 7px 7px 7px 7px;
   width: 700px;
   height: 400px;
@@ -47,11 +55,15 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
 }
 
 #content {
   font-size: 30px;
   font-weight: 300;
+  text-shadow:
+  -0.5px -0.5px 0 #ffffff, 
+   0.5px  0.5px 0 #000000;
 }
 
 .card-inner {
@@ -80,6 +92,9 @@ img {
   color: #04005d;
   text-decoration-line: none;
   transition: font-weight 0.3s ease; /* Transition only for font-weight */
+  text-shadow:
+  -0.5px -0.5px 0 #ffffff, 
+   0.5px  0.5px 0 #000000;
 }
 
 .contact-row a:hover {
