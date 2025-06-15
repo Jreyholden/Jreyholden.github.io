@@ -26,12 +26,118 @@ a {
   text-shadow:
   -0.5px -0.5px 0 #ffffff, 
    0.5px  0.5px 0 #000000;
+  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  font-weight: normal !important;
 }
 
 a:hover,
 a:active,
 a:focus {
-  font-weight: 700;
+  color: #2a2a8f;
+  font-weight: normal !important;
+}
+
+/* Hover effects */
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #2a2a8f;
+  height: 2px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-left:hover:before,
+.hvr-underline-from-left:focus:before,
+.hvr-underline-from-left:active:before {
+  right: 0;
+}
+
+.hvr-underline-from-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  left: 100%;
+  bottom: 0;
+  background: #2a2a8f;
+  height: 2px;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-right:hover:before,
+.hvr-underline-from-right:focus:before,
+.hvr-underline-from-right:active:before {
+  left: 0;
+}
+
+.hvr-underline-from-center {
+  display: inline-flex;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #2a2a8f;
+  transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+  width: 100%;
+  left: 0;
+}
+
+
+#contacts a {
+  margin-bottom: 5px;
+  display: inline-block;
 }
 
 img {
@@ -63,16 +169,43 @@ img {
   text-shadow:
   -0.5px -0.5px 0 #ffffff, 
    0.5px  0.5px 0 #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .card-inner {
-  border: 3px solid #04005d; /* Thin border inside */
-  padding: 1px 10px 10px 10px; /* Space between the border and content */
+  border: 3px solid #04005d;
+  padding: 10px;
   height: 100%;
   width: 100%;
-  box-sizing: border-box; /* Keeps the padding and border inside */
-  position: relative; /* Added to make .card-inner the positioning context */
+  position: relative;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
+
+.card-inner > .corner {
+  position: absolute;
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+
 
 #contacts {
   position: absolute;
@@ -90,22 +223,80 @@ img {
   font-size: 20px;
   color: #04005d;
   text-decoration-line: none;
-  transition: font-weight 0.3s ease; /* Transition only for font-weight */
+  transition: color 0.3s ease;
   text-shadow:
   -0.5px -0.5px 0 #ffffff, 
    0.5px  0.5px 0 #000000;
+  font-weight: normal !important;
 }
 
-.contact-row a:hover {
-  font-weight: 700; /* Bold the text on hover */
+.contact-row a:hover,
+.contact-row a:active,
+.contact-row a:focus {
+  color: #2a2a8f;
+  font-weight: normal !important;
 }
 
 .resume-button {
-  margin-left: 20px; /* Optional spacing between the email and resume button */
+  margin-left: 20px;
   position: absolute;
-  right: 20px; /* Offset from the right edge of .card-inner, matching its right padding */
+  right: 20px;
+  font-weight: normal !important;
 }
 
+.resume-button:hover,
+.resume-button:active,
+.resume-button:focus {
+  font-weight: normal !important;
+}
+
+.corner {
+  position: absolute;
+  padding: 10px;
+  z-index: 1;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  width: auto;
+}
+
+.bottom-right a {
+  display: inline-block;
+  position: relative;
+  right: 0;
+}
+
+.flip-button-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flip-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #04005d;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: transform 0.4s ease;
+  transform-origin: 50% 62%; /* ensure it rotates from the center */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+}
 
 
 
